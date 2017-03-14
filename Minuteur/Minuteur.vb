@@ -3,24 +3,23 @@ Imports System.Windows.Forms
 
 Public Class Minuteur
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
-
-    End Sub
-
-
-    Private Sub Minuteur_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+    Protected Overrides Sub onpaint(e As PaintEventArgs)
 
         Dim p As New Pen(Color.Green, 10)
 
         'Create rectangle objects
-        Dim rt As New Rectangle(100, 150, 80, 100)
+        Dim rt As New Rectangle(100, 100, 80, 100)
 
         'Draw arcs
-        e.Graphics.DrawArc(p, rt, 0, -90)
-
+        e.Graphics.DrawArc(p, rt, 0, TrackBar1.Value)
 
     End Sub
 
+    Private Sub TrackBar1_ValueChanged(sender As Object, e As EventArgs) Handles TrackBar1.ValueChanged
+
+        Invalidate()
+
+    End Sub
 End Class
