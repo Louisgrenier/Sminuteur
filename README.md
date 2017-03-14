@@ -1,1 +1,1 @@
-PROG
+SMinuteur
