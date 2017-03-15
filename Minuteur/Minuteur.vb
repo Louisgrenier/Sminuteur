@@ -11,22 +11,12 @@ Public Class Minuteur
         Dim p As New Pen(Color.Green, 10)
 
         'Create rectangle objects
-        Dim rt As New Rectangle(100, 100, 80, 100)
+        Dim rt As New Rectangle(2, 2, Size.Width, Size.Height)
 
         'Draw arcs
         e.Graphics.DrawArc(p, rt, 0, 360)
 
     End Sub
-
-    Private Sub TrackBar1_ValueChanged(sender As Object, e As EventArgs)
-
-        Invalidate()
-
-    End Sub
-
-
-
-
 
     Private Sub chrono()
 
