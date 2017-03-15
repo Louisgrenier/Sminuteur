@@ -50,8 +50,9 @@ Public Class Minuteur
         End Get
 
         Set(value As Boolean)
-            Etat = value
-            chrono()
+            If value = True Then
+                chrono()
+            End If
         End Set
     End Property
 
