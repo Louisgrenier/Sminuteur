@@ -14,7 +14,7 @@ Public Class Minuteur
         Dim rt As New Rectangle(100, 100, 80, 100)
 
         'Draw arcs
-        e.Graphics.DrawArc(p, rt, 0, TrackBar1.Value)
+        e.Graphics.DrawArc(p, rt, 0, 360)
 
     End Sub
 
@@ -28,7 +28,7 @@ Public Class Minuteur
 
 
 
-    Private Sub chrono(Start As Boolean)
+    Private Sub chrono()
 
 
 
@@ -50,7 +50,7 @@ Public Class Minuteur
 
 #Region "propriété"
 
-    <Description("Start ou Stop horloge")>
+    <Description("Start chrono")>
     Public Property Etat As Boolean
 
         Get
@@ -59,13 +59,7 @@ Public Class Minuteur
 
         Set(value As Boolean)
             Etat = value
-
-            If value = True Then
-                chrono(True)
-            Else
-                chrono(False)
-            End If
-
+            chrono()
         End Set
     End Property
 
