@@ -6,12 +6,13 @@ Imports System.Windows.Forms
 Public Class Minuteur
 
 #Region "variable global"
+    Dim m_etat As String
     Dim minutes As Integer = 0
     Dim seconde As Integer = 0
-    Public Structure EtatChrono
-        Const Play = "Start"
-        Const Pause = "Stop"
-    End Structure
+    Public Enum EtatChrono
+        Play = 1
+        Pause = 0
+    End Enum
 #End Region
 
 #Region "Code"
@@ -62,24 +63,23 @@ Public Class Minuteur
         End Get
 
         Set(value As EtatChrono)
-            Etat = value
-            If value = "Start" Then
+            If value = 1 Then
                 Chrono.Start()
-            ElseIf value = "Stop" Then
+            ElseIf value = 0 Then
                 Chrono.Stop()
             End If
         End Set
+
     End Property
 
     <Description("Temps minute")>
     Public Property Temporisation As Integer
 
         Get
-            Return m_temps
+            Return Temporisation
         End Get
 
         Set(value As Integer)
-            m_temps = value
             minutes = value
         End Set
     End Property

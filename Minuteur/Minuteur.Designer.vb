@@ -31,7 +31,7 @@ Partial Class Minuteur
         '
         Me.LblChrono.BackColor = System.Drawing.Color.Transparent
         Me.LblChrono.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LblChrono.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblChrono.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblChrono.Location = New System.Drawing.Point(0, 0)
         Me.LblChrono.Name = "LblChrono"
         Me.LblChrono.Size = New System.Drawing.Size(316, 307)
