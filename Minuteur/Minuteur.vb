@@ -37,6 +37,7 @@ Public Class Minuteur
                 minute = minute - 1
                 seconde = 60
             End If
+            LblChrono.Text = minute & " : " & seconde
         End While
     End Sub
 
