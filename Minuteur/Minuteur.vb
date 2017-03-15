@@ -32,12 +32,12 @@ Public Class Minuteur
     Private Sub Chrono_Tick(sender As Object, e As EventArgs) Handles Chrono.Tick
 
         If seconde <> 0 Then
-                seconde = seconde - 1
-            ElseIf seconde = 0 Then
+            seconde = seconde - 1
+        ElseIf seconde = 0 Then
             minutes = minutes - 1
 
             seconde = 60
-            End If
+        End If
         LblChrono.Text = minutes & " : " & seconde
 
     End Sub
@@ -47,7 +47,7 @@ Public Class Minuteur
         'Affichage initial
         LblChrono.Text = "00 : 00"
         minutes = 0
-        seconde = 60
+        seconde = 0
 
     End Sub
 
@@ -80,6 +80,7 @@ Public Class Minuteur
         End Get
 
         Set(value As Integer)
+            Temporisation = value
             minutes = value
         End Set
     End Property
