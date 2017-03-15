@@ -20,18 +20,20 @@ Public Class Minuteur
 
     Private Sub chrono()
 
+        Dim minute As Single = Me.temps
+        Dim seconde As Single = 60
 
+        'Affichage initial
+        LblChrono.Text = minute & " : " & seconde
 
-
-
-
-
-
-
-
-
-
-
+        While minute <> 0
+            If seconde <> 0 Then
+                seconde = seconde - 1
+            ElseIf seconde = 0 Then
+                minute = minute - 1
+                seconde = 60
+            End If
+        End While
     End Sub
 
 
