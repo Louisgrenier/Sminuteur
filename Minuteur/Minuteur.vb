@@ -6,13 +6,12 @@ Imports System.Windows.Forms
 Public Class Minuteur
 
 #Region "variable global"
-    Dim m_Etat As Integer
-    Dim m_temps As Single
-    Public Enum EtatChrono
-        Play = 1
-        Pause = 2
-        Reset = 3
-    End Enum
+    Dim minutes As Integer = 0
+    Dim seconde As Integer = 0
+    Public Structure EtatChrono
+        Const Play = "Start"
+        Const Pause = "Stop"
+    End Structure
 #End Region
 
 #Region "Code"
@@ -31,78 +30,57 @@ Public Class Minuteur
 
     Private Sub Chrono_Tick(sender As Object, e As EventArgs) Handles Chrono.Tick
 
-        Dim minute As Single = Me.Temporisation
-        Dim seconde As Single = 60
-
-        'Affichage initial
-        LblChrono.Text = minute & " : " & seconde
-
-        While minute <> 0
-            If seconde <> 0 Then
+        If seconde <> 0 Then
                 seconde = seconde - 1
             ElseIf seconde = 0 Then
-                minute = minute - 1
-                seconde = 60
-            End If
-            LblChrono.Text = minute & " : " & seconde
-        End While
+            minutes = minutes - 1
 
+            seconde = 60
+            End If
+        LblChrono.Text = minutes & " : " & seconde
 
     End Sub
 
-    'Private Sub chrono()
+    Private Sub Minuteur_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-    '    Dim minute As Single = Me.Temporisation
-    '    Dim seconde As Single = 60
+        'Affichage initial
+        LblChrono.Text = "00 : 00"
+        minutes = 0
+        seconde = 60
 
-    '    'Affichage initial
-    '    LblChrono.Text = minute & " : " & seconde
-
-    '    While minute <> 0
-    '        If seconde <> 0 Then
-    '            seconde = seconde - 1
-    '        ElseIf seconde = 0 Then
-    '            minute = minute - 1
-    '            seconde = 60
-    '        End If
-    '        LblChrono.Text = minute & " : " & seconde
-    '    End While
-    'End Sub
-
-
+    End Sub
 
 #End Region
 
 #Region "propriété"
 
     <Description("Marche, Pause ou reset du chrono")>
-    Public Property Etat As Integer
+    Public Property Etat As EtatChrono
 
         Get
-            Return m_Etat
+            Return Etat
         End Get
 
-        Set(value As Integer)
-            m_Etat = value
-            If value = 1 Then
+        Set(value As EtatChrono)
+            Etat = value
+            If value = "Start" Then
                 Chrono.Start()
-            ElseIf value = 2 Then
+            ElseIf value = "Stop" Then
                 Chrono.Stop()
-            ElseIf value = 3 Then
-                Reset()
             End If
         End Set
     End Property
 
     <Description("Temps minute")>
-    Public Property Temporisation As Single
+    Public Property Temporisation As Integer
 
         Get
             Return m_temps
         End Get
 
-        Set(value As Single)
+        Set(value As Integer)
             m_temps = value
+            minutes = value
         End Set
     End Property
 

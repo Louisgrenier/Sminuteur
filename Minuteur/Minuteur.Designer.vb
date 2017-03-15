@@ -39,6 +39,10 @@ Partial Class Minuteur
         Me.LblChrono.Text = "Label1"
         Me.LblChrono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Chrono
+        '
+        Me.Chrono.Interval = 1000
+        '
         'Minuteur
         '
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
