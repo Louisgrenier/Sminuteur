@@ -18,11 +18,34 @@ Public Class Minuteur
 
     End Sub
 
-    Private Sub TrackBar1_ValueChanged(sender As Object, e As EventArgs) Handles TrackBar1.ValueChanged
+    Private Sub TrackBar1_ValueChanged(sender As Object, e As EventArgs)
 
         Invalidate()
 
     End Sub
+
+
+
+
+
+    Private Sub chrono(Start As Boolean)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    End Sub
+
+
+
 #End Region
 
 #Region "propriété"
@@ -36,18 +59,25 @@ Public Class Minuteur
 
         Set(value As Boolean)
             Etat = value
+
+            If value = True Then
+                chrono(True)
+            Else
+                chrono(False)
+            End If
+
         End Set
     End Property
 
     <Description("Temps minute")>
-    Public Property temps As Boolean
+    Public Property temps As Single
 
         Get
-            Return Etat
+            Return temps
         End Get
 
         Set(value As Single)
-            Etat = value
+            temps = value
         End Set
     End Property
 
