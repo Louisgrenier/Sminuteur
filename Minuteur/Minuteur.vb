@@ -5,8 +5,15 @@ Imports System.Windows.Forms
 
 Public Class Minuteur
 
-    Dim m_Etat As Boolean
+#Region "variable global"
+    Dim m_Etat As Integer
     Dim m_temps As Single
+    Public Enum EtatChrono
+        Play = 1
+        Pause = 2
+        Reset = 3
+    End Enum
+#End Region
 
 #Region "Code"
 
@@ -22,7 +29,7 @@ Public Class Minuteur
 
     End Sub
 
-    Private Sub chrono()
+    Private Sub Chrono_Tick(sender As Object, e As EventArgs) Handles Chrono.Tick
 
         Dim minute As Single = Me.Temporisation
         Dim seconde As Single = 60
@@ -39,7 +46,28 @@ Public Class Minuteur
             End If
             LblChrono.Text = minute & " : " & seconde
         End While
+
+
     End Sub
+
+    'Private Sub chrono()
+
+    '    Dim minute As Single = Me.Temporisation
+    '    Dim seconde As Single = 60
+
+    '    'Affichage initial
+    '    LblChrono.Text = minute & " : " & seconde
+
+    '    While minute <> 0
+    '        If seconde <> 0 Then
+    '            seconde = seconde - 1
+    '        ElseIf seconde = 0 Then
+    '            minute = minute - 1
+    '            seconde = 60
+    '        End If
+    '        LblChrono.Text = minute & " : " & seconde
+    '    End While
+    'End Sub
 
 
 
@@ -47,17 +75,21 @@ Public Class Minuteur
 
 #Region "propriété"
 
-    <Description("Start chrono")>
-    Public Property Etat As Boolean
+    <Description("Marche, Pause ou reset du chrono")>
+    Public Property Etat As Integer
 
         Get
             Return m_Etat
         End Get
 
-        Set(value As Boolean)
+        Set(value As Integer)
             m_Etat = value
-            If value = True Then
-                chrono()
+            If value = 1 Then
+                Chrono.Start()
+            ElseIf value = 2 Then
+                Chrono.Stop()
+            ElseIf value = 3 Then
+                Reset()
             End If
         End Set
     End Property

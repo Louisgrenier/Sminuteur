@@ -22,7 +22,9 @@ Partial Class Minuteur
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LblChrono = New System.Windows.Forms.Label()
+        Me.Chrono = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'LblChrono
@@ -48,4 +50,5 @@ Partial Class Minuteur
     End Sub
 
     Friend WithEvents LblChrono As Windows.Forms.Label
+    Friend WithEvents Chrono As Windows.Forms.Timer
 End Class
