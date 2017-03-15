@@ -1,8 +1,12 @@
-﻿Imports System.ComponentModel
+﻿Option Strict On
+Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
 Public Class Minuteur
+
+    Dim m_Etat As Boolean
+    Dim m_temps As Single
 
 #Region "Code"
 
@@ -20,7 +24,7 @@ Public Class Minuteur
 
     Private Sub chrono()
 
-        Dim minute As Single = Me.temps
+        Dim minute As Single = Me.Temporisation
         Dim seconde As Single = 60
 
         'Affichage initial
@@ -46,10 +50,11 @@ Public Class Minuteur
     Public Property Etat As Boolean
 
         Get
-            Return Etat
+            Return m_Etat
         End Get
 
         Set(value As Boolean)
+            m_Etat = value
             If value = True Then
                 chrono()
             End If
@@ -57,14 +62,14 @@ Public Class Minuteur
     End Property
 
     <Description("Temps minute")>
-    Public Property temps As Single
+    Public Property Temporisation As Single
 
         Get
-            Return temps
+            Return m_temps
         End Get
 
         Set(value As Single)
-            temps = value
+            m_temps = value
         End Set
     End Property
 
