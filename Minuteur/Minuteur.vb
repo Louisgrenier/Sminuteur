@@ -40,6 +40,10 @@ Public Class Minuteur
         End If
         LblChrono.Text = minutes & " : " & seconde
 
+        If seconde = 0 And minutes = 0 Then
+            Chrono.Stop()
+        End If
+
     End Sub
 
     Private Sub Minuteur_Load(sender As Object, e As EventArgs) Handles Me.Load
