@@ -1,10 +1,10 @@
-C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\bin\Debug\Minuteur.dll
-C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\bin\Debug\Minuteur.pdb
-C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\bin\Debug\Minuteur.xml
+C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.vbprojResolveAssemblyReference.cache
 C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.Minuteur.resources
 C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.Resources.resources
 C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.vbproj.GenerateResource.Cache
-C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.dll
 C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.xml
+C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\bin\Debug\Minuteur.dll
+C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\bin\Debug\Minuteur.pdb
+C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\bin\Debug\Minuteur.xml
+C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.dll
 C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.pdb
-C:\Users\user\Documents\Perso\PROG\SMinuteur\Sminuteur\Minuteur\obj\Debug\Minuteur.vbprojResolveAssemblyReference.cache
