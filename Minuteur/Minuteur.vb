@@ -22,7 +22,7 @@ Public Class Minuteur
         Dim p As New Pen(Color.Green, 10)
 
         'Create rectangle objects
-        Dim rt As New Rectangle(2, 2, Size.Width, Size.Height)
+        Dim rt As New Rectangle(4, 4, Size.Width - 10, Size.Height - 10)
 
         'Draw arcs
         e.Graphics.DrawArc(p, rt, 0, 360)

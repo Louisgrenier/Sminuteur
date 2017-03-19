@@ -34,7 +34,7 @@ Partial Class Minuteur
         Me.LblChrono.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblChrono.Location = New System.Drawing.Point(0, 0)
         Me.LblChrono.Name = "LblChrono"
-        Me.LblChrono.Size = New System.Drawing.Size(316, 307)
+        Me.LblChrono.Size = New System.Drawing.Size(313, 303)
         Me.LblChrono.TabIndex = 0
         Me.LblChrono.Text = "Label1"
         Me.LblChrono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -46,9 +46,10 @@ Partial Class Minuteur
         'Minuteur
         '
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.LblChrono)
         Me.Name = "Minuteur"
-        Me.Size = New System.Drawing.Size(316, 307)
+        Me.Size = New System.Drawing.Size(313, 303)
         Me.ResumeLayout(False)
 
     End Sub
